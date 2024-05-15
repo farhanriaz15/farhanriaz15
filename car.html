@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW CAR</title>
+    <link rel="stylesheet" href="car.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Car</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">More details</a></li>
+                </ul>
+            </div>
+        </nav>
+
+                     <div class="information">
+                        <div class="overlay"></div>
+                        <img src="bmw1.png" class="car">
+                         <div id="circle">
+                             <div class="feature one">
+                                <img src="engine.png">
+                                <div>
+                                    <h1>Engine</h1>
+                                    <p>4.4 L S68 twin-turbo V8 </p>
+                                </div>
+                             </div>
+                             <div class="feature two">
+                                <img src="mileage1.png" >
+                                <div>
+                                    <h1>Mileage</h1>
+                                    <p>Performance upto 441 kW/600 HP</p>
+                                </div>
+                             </div>
+                             <div class="feature three">
+                                <img src="power1.png">
+                                <div>
+                                    <h1>Power</h1>
+                                    <p>Acceleration from 80 to 120 km/h , 600 hp </p>
+                                </div>
+                             </div>
+                             <div class="feature four">
+                                <img src="smart.png">
+                                <div>
+                                    <h1>Efficiency</h1>
+                                    <p>Modified exhaust system  </p>
+                                </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="controls">
+                        <img src="arrow.png" id="upbtn">
+                        <h3>Features</h3>
+                        <img src="arrow.png" id="downbtn">
+                     </div>
+
+    </div>
+  <div class="footer">
+    <p>&copy; BMW AG 2024</p>
+    <a href="#">Contact</a> |
+    <a href="#">Terms</a> |
+    <a href="#">Privacy</a>
+  </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var downbtn = document.getElementById("downbtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+        upbtn.onclick = function()
+        {
+              rotateSum = rotateValue + "rotate(-90deg)";
+              circle.style.transform = rotateSum;
+              rotateValue = rotateSum;
+        }
+        downbtn.onclick = function()
+        {
+              rotateSum = rotateValue + "rotate(90deg)";
+              circle.style.transform = rotateSum;
+              rotateValue = rotateSum;
+        }
+    </script>
+
+</body>
+</html>
